@@ -1,0 +1,1051 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/Article">
+<head>
+
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="l1UEMfTFif4wEHYg6teawnlniJ5RwnBvtijerjkDMgQ6MTUwNTM3NzE2OTYwODEyMA" />
+
+  
+    <link rel="canonical" href="https://developer.android.com/studio/command-line/index.html">
+  
+
+  
+    <link rel="alternate" href="https://developer.android.com/studio/command-line/index.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/studio/command-line/index.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="https://developer.android.com/studio/command-line/index.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="https://developer.android.com/_static/2273a78347/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="https://developer.android.com/_static/2273a78347/images/android/touchicon-180.png">
+
+
+<title>
+
+  Command Line Tools | Android Studio
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-03-29T23:34:02.533410">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+
+
+
+
+
+
+
+<link href="https://developer.android.com/static/css/default.css?v=2017091408" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="https://developer.android.com/_static/2273a78347/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="https://developer.android.com/_static/2273a78347/js/script_foot_closure_android__zh_cn.js"></script>
+<script src="https://developer.android.com/_static/2273a78347/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = '/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": false, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="https://developer.android.com/static/js/docs.js?v=2017091408" type="text/javascript"></script>
+
+
+
+</head>
+
+<body class="gc-documentation
+            
+            dac-studio no-crumbs guide
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Android Studio&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Android Studio&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "US", "language": {"requested": "zh-cn", "served": "en"}, "projectName": "Android Studio", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+<a class="dac-header-logo" href="https://developer.android.com/studio/index.html">
+  
+  <img class="dac-header-logo-image" src="https://developer.android.com/studio/images/studio-icon.png"
+      srcset="https://developer.android.com/studio/images/studio-icon_2x.png 2x"
+      width="34" height="38" alt="">
+  
+Android Studio</a>
+<ul class="dac-header-tabs">
+  <li>
+    <a class="dac-header-tab" href="https://developer.android.com/studio/features.html"
+       es-lang="Funciones"
+       id-lang="Fitur"
+       ja-lang="機能"
+       ko-lang="기능"
+       pt-br-lang="Recursos"
+       zh-cn-lang="功能"
+       >Features</a>
+  </li>
+  <li>
+    <a class="dac-header-tab" href="https://developer.android.com/studio/intro/index.html"
+       es-lang="Guía del usuario"
+       id-lang="Panduan Pengguna"
+       ja-lang="ユーザーガイド"
+       ko-lang="사용자 가이드"
+       pt-br-lang="Guia do usuário"
+       zh-cn-lang="用户指南"
+       >User Guide</a>
+  </li>
+  <li>
+    <a class="dac-header-tab" href="https://developer.android.com/studio/preview/index.html"
+       es-lang="Vista Previa"
+       id-lang="Pratinjau"
+       ja-lang="プレビュー"
+       ko-lang="미리보기"
+       pt-br-lang="Visualização"
+       zh-cn-lang="预览"
+       >Preview</a>
+  </li>
+</ul>
+
+
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="搜索">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="https://cse.google.com/cse.js?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">返回</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+            <ul id="nav">
+              <li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/intro/index.html"  es-lang="Conocer Android Studio" id-lang="Mengenal Android Studio" ja-lang="Android Studio の概要" ko-lang="Android 스튜디오 만나보기" pt-br-lang="Conheça o Android Studio" zh-cn-lang="探索 Android Studio">Meet Android Studio</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/intro/migrate.html"  es-lang="Realizar una migración a Studio" id-lang="Bermigrasi ke Studio" ja-lang="Eclipse から Android Studio への移行" ko-lang="Studio로 마이그레이션" pt-br-lang="Migre para o Studio" zh-cn-lang="迁移至 Studio">Migrate to Studio</a></li><li><a href="https://developer.android.com/studio/intro/studio-config.html"  es-lang="Configurar el IDE" id-lang="Mengonfigurasi IDE" ja-lang="Android Studio の設定" ko-lang="IDE 구성" pt-br-lang="Configurar o IDE" zh-cn-lang="配置 IDE">Configure the IDE</a></li><li><a href="https://developer.android.com/studio/intro/keyboard-shortcuts.html"  es-lang="Combinaciones de teclas" id-lang="Pintasan Keyboard" ja-lang="キーボード ショートカット" ko-lang="단축키" pt-br-lang="Atalhos de teclado" zh-cn-lang="键盘快捷键">Keyboard Shortcuts</a></li><li><a href="https://developer.android.com/studio/intro/accessibility.html" >Accessibility Features</a></li><li><a href="https://developer.android.com/studio/intro/update.html"  es-lang="Actualizar el IDE y las herramientas" id-lang="Memperbarui IDE dan Alat" ja-lang="IDE および SDK ツールの更新" ko-lang="IDE 및 도구 업데이트" pt-br-lang="Atualizar IDE e ferramentas" zh-cn-lang="更新 IDE 和工具">Update the IDE and Tools</a></li></ul></li><li class="nav-section"><div class="nav-section-header empty"><a href="https://developer.android.com/studio/workflow.html" >Workflow Basics</a></div></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/projects/index.html"  es-lang="Administrar tu proyecto" id-lang="Mengelola Proyek Anda" ja-lang="プロジェクトの管理" ko-lang="프로젝트 관리" pt-br-lang="Gerenciar seu projeto" zh-cn-lang="管理项目">Manage Your Project</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/projects/create-project.html"  es-lang="Crear un proyecto" id-lang="Membuat Proyek" ja-lang="プロジェクトの作成" ko-lang="프로젝트 생성" pt-br-lang="Criar um projeto" zh-cn-lang="创建项目">Create a Project</a></li><li><a href="https://developer.android.com/studio/projects/add-native-code.html"  es-lang="Agregar código C y C++" id-lang="Menambahkan Kode C dan C++" ja-lang="C / C++ コードの追加" ko-lang="C 및 C++ 코드 추가" pt-br-lang="Adicionar código C e C++" zh-cn-lang="添加 C 和 C++ 代码">Add C and C++ Code</a></li><li><a href="https://developer.android.com/studio/projects/android-library.html"  es-lang="Crear una biblioteca de Android" id-lang="Membuat Pustaka Android" ja-lang="Android ライブラリの作成" ko-lang="Android 라이브러리 생성" pt-br-lang="Criar uma biblioteca Android" zh-cn-lang="创建 Android 库">Create an Android Library</a></li><li><a href="https://developer.android.com/studio/projects/continuous-integration.html" >Set Up Continuous Integration</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/write/index.html"  es-lang="Cómo escribir tu app" id-lang="Menuliskan Aplikasi Anda" ja-lang="アプリの記述" ko-lang="앱 작성" pt-br-lang="Programe o aplicativo" zh-cn-lang="编写您的应用">Write Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/projects/templates.html"  es-lang="Agregar código desde una plantilla" id-lang="Menambahkan Kode dari Template" ja-lang="テンプレートからのコード追加" ko-lang="템플릿에서 코드 추가" pt-br-lang="Adicionar código de um modelo" zh-cn-lang="从模板添加代码">Add Code from a Template</a></li><li><a href="https://developer.android.com/studio/write/sample-code.html" >Find Sample Code</a></li><li><a href="https://developer.android.com/studio/projects/add-app-module.html" >Add a Module for a New Device</a></li><li><a href="https://developer.android.com/studio/write/create-java-class.html" >Create a Java Class or Type</a></li><li><a href="https://developer.android.com/studio/write/add-resources.html" >Add App Resources</a></li><li><a href="https://developer.android.com/studio/write/layout-editor.html"  es-lang="Compilar una IU con un editor de diseño" id-lang="Membangun UI dengan Layout Editor" ja-lang="Layout Editor を用いた UI 作成" ko-lang="Layout Editor로 UI 빌드" pt-br-lang="Criar uma IU com o editor de layout" zh-cn-lang="使用布局编辑器构建 UI">Build a UI with Layout Editor</a></li><li><a href="https://developer.android.com/studio/write/theme-editor.html"  es-lang="Diseñar temas de apps" id-lang="Mendesain Tema Aplikasi" ja-lang="アプリテーマのデザイン" ko-lang="앱 테마 디자인" pt-br-lang="Projetar temas de aplicativo" zh-cn-lang="设计应用主题背景">Design App Themes</a></li><li><a href="https://developer.android.com/studio/write/vector-asset-studio.html"  es-lang="Agregar gráficos vectoriales de varias densidades" id-lang="Menambahkan Grafis Vektor Multi-Kepadatan" ja-lang="さまざまな密度に適用可能なベクター グラフィックの追加" ko-lang="다중 밀도 벡터 그래픽 추가" pt-br-lang="Adicionar gráficos vetoriais de várias densidades" zh-cn-lang="添加多密度矢量图形">Add Multi-Density Vector Graphics</a></li><li><a href="https://developer.android.com/studio/write/image-asset-studio.html"  es-lang="Crear íconos con Image Asset Studio" id-lang="Membuat Ikon dengan Image Asset Studio" ja-lang="Image Asset Studio を用いたアイコン作成" ko-lang="Image Asset Studio로 아이콘 생성" pt-br-lang="Criar ícones com estúdio de ativos de imagem" zh-cn-lang="使用 Image Asset Studio 创建图标">Create Icons with Image Asset Studio</a></li><li><a href="https://developer.android.com/studio/write/draw9patch.html"  es-lang="Crear mapas de bits de tamaño ajustable (9-Patch)" id-lang="Membuat Bitmap Yang Bisa Diubah Ukurannya (9-Patch)" ja-lang="リサイズ可能なビットマップ（9-patch）の作成" ko-lang="크기 조정 가능한 비트맵 생성(9-패치)" pt-br-lang="Criar bitmaps redimensionáveis (9-patch)" zh-cn-lang="创建可调整大小的位图 (9-Patch)">Create Resizable Bitmaps (9-Patch)</a></li><li><a href="https://developer.android.com/studio/write/convert-webp.html" >Create WebP Images</a></li><li><a href="https://developer.android.com/studio/write/translations-editor.html" >Localize the UI</a></li><li><a href="https://developer.android.com/studio/write/app-link-indexing.html" >Add Android App Links</a></li><li><a href="https://developer.android.com/studio/write/firebase.html" >Connect to Firebase</a></li><li><a href="https://developer.android.com/studio/write/lint.html"  es-lang="Mejora tu código con Lint" id-lang="Memperbaiki Kode Anda dengan Lint" ja-lang="Lint によるコードの改善" ko-lang="Lint로 코드 개선" pt-br-lang="Melhorar seu código com Lint" zh-cn-lang="使用 Lint 改进您的代码">Improve Your Code with Lint</a></li><li><a href="https://developer.android.com/studio/write/annotations.html"  es-lang="Mejorar la inspección de código con anotaciones" id-lang="Memperbaiki Pemeriksaan Kode dengan Anotasi" ja-lang="アノテーションによるコード検査の改善" ko-lang="주석으로 코드 검사 개선" pt-br-lang="Melhorar a inspeção de código com anotações" zh-cn-lang="使用注解改进代码检查">Improve Code Inspection with Annotations</a></li><li><a href="https://developer.android.com/studio/write/tool-attributes.html" >Tools Attributes Reference</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/run/index.html"  es-lang="Compilar y ejecutar tu app" id-lang="Membuat dan Menjalankan Aplikasi Anda" ja-lang="アプリをビルドして実行する" ko-lang="앱 빌드 및 실행" pt-br-lang="Compilar e executar seu aplicativo" zh-cn-lang="构建和运行您的应用">Build and Run Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/run/emulator.html"  es-lang="Ejecutar apps en el emulador" id-lang="Menjalankan Aplikasi pada Emulator" ja-lang="Android Emulator 上でアプリを実行する" ko-lang="Emulator에서 앱 실행" pt-br-lang="Executar aplicativos no emulador" zh-cn-lang="在模拟器上运行应用">Run Apps on the Emulator</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/run/managing-avds.html"  es-lang="Crear y administrar dispositivos virtuales" id-lang="Membuat dan Mengelola Perangkat Virtual" ja-lang="仮想端末の作成と管理" ko-lang="가상 기기 생성 및 관리" pt-br-lang="Criar e gerenciar dispositivos virtuais" zh-cn-lang="创建和管理虚拟设备">Create and Manage Virtual Devices</a></li><li><a href="https://developer.android.com/studio/run/emulator-commandline.html" >Start the Emulator from the Command Line</a></li><li><a href="https://developer.android.com/studio/run/emulator-console.html" >Send Emulator Console Commands</a></li><li><a href="https://developer.android.com/studio/run/emulator-networking.html" >Set Up Emulator Networking</a></li><li><a href="https://developer.android.com/studio/run/emulator-acceleration.html" >Configure Hardware Acceleration</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/run/device.html"  es-lang="Ejecutar apps en un dispositivo de hardware" id-lang="Menjalankan Aplikasi di Perangkat Keras" ja-lang="ハードウェア端末上でアプリを実行する" ko-lang="하드웨어 기기에서 앱 실행" pt-br-lang="Executar aplicativos em um dispositivo de hardware" zh-cn-lang="在硬件设备上运行应用">Run Apps on a Hardware Device</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/run/oem-usb.html"  es-lang="Instalar controladores USB de OEM" id-lang="Memasang Driver USB OEM" ja-lang="OEM USB ドライバのインストール" ko-lang="OEM USB 드라이버 설치" pt-br-lang="Instalar drivers USB OEM" zh-cn-lang="安装原始设备制造商 USB 驱动程序">Install OEM USB Drivers</a></li><li><a href="https://developer.android.com/studio/run/win-usb.html"  es-lang="Obtener el controlador USB de Google" id-lang="Memperoleh Driver USB Google" ja-lang="Google USB ドライバを入手する" ko-lang="Google USB 드라이버 가져오기" pt-br-lang="Obter o driver USB do Google" zh-cn-lang="获取 Google USB 驱动程序">Get the Google USB Driver</a></li></ul></li><li><a href="https://developer.android.com/studio/run/rundebugconfig.html"  es-lang="Crear configuraciones de ejecución y depuración" id-lang="Membuat Konfigurasi Jalankan/Debug" ja-lang="実行、デバッグ構成の作成" ko-lang="실행/디버그 구성 생성" pt-br-lang="Cirar configurações de executar/depurar" zh-cn-lang="创建运行/调试配置">Create Run/Debug Configurations</a></li><li><a href="https://developer.android.com/studio/build/building-cmdline.html"  es-lang="Compilar tu app desde la línea de comandos" id-lang="Membangun Aplikasi Anda dari Baris Perintah" ja-lang="コマンドラインからのアプリ作成" ko-lang="명령줄에서 앱 빌드" pt-br-lang="Compilar seu aplicativo na linha de comando" zh-cn-lang="从命令行构建您的应用">Build Your App from the Command Line</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/build/index.html"  es-lang="Configurar tu compilación" id-lang="Mengonfigurasi Pembangunan" ja-lang="ビルドの設定" ko-lang="빌드 구성" pt-br-lang="Configure sua compilação" zh-cn-lang="配置构建">Configure Your Build</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/build/application-id.html"  es-lang="Establecer el ID de aplicación" id-lang="Menetapkan ID Aplikasi" ja-lang="アプリケーション ID の設定" ko-lang="애플리케이션 ID 설정" pt-br-lang="Definir o ID do aplicativo" zh-cn-lang="设置应用 ID">Set the Application ID</a></li><li><a href="https://developer.android.com/studio/build/dependencies.html" >Add Build Dependencies</a></li><li><a href="https://developer.android.com/studio/build/optimize-your-build.html" >Optimize Your Build Speed</a></li><li><a href="https://developer.android.com/studio/build/build-cache.html" >Use Build Cache</a></li><li><a href="https://developer.android.com/studio/build/build-variants.html"  es-lang="Configurar variantes de compilación" id-lang="Mengonfigurasi Varian Pembangunan" ja-lang="ビルド バリアントの設定" ko-lang="빌드 변형 구성" pt-br-lang="Configure variantes de compilação" zh-cn-lang="配置构建变体">Configure Build Variants</a></li><li><a href="https://developer.android.com/studio/build/configure-apk-splits.html" >Build Multiple APKs</a></li><li><a href="https://developer.android.com/studio/build/manifest-merge.html"  es-lang="Combinar varios manifiestos" id-lang="Menggabungkan Beberapa Manifes" ja-lang="複数のマニフェストの統合" ko-lang="다중 매니페스트 병합" pt-br-lang="Mesclar vários manifestos" zh-cn-lang="合并多个清单">Merge Multiple Manifests</a></li><li><a href="https://developer.android.com/studio/build/manifest-build-variables.html" >Inject Build Variables into the Manifest</a></li><li><a href="https://developer.android.com/studio/build/shrink-code.html"  es-lang="Reducir tu código y tus recursos" id-lang="Menciutkan Kode dan Sumber Daya Anda" ja-lang="コードとリソースの圧縮" ko-lang="코드 및 리소스 축소" pt-br-lang="Reduza seus códigos e recursos" zh-cn-lang="Shrink Your Code and Resources">Shrink Your Code and Resources</a></li><li><a href="https://developer.android.com/studio/build/multidex.html"  es-lang="Configurar apps con métodos de más de 64K" id-lang="Mengonfigurasi Aplikasi dengan Lebih dari Metode 64K" ja-lang="64K を超えるメソッドを使用するアプリの設定" ko-lang="64K 이상의 메서드로 앱 구성" pt-br-lang="Configure aplicativos com mais de 64 K métodos" zh-cn-lang="配置方法数超过 64K 的应用">Configure Apps with Over 64K Methods</a></li><li><a href="https://developer.android.com/studio/build/apk-analyzer.html" >Analyze Your Build with APK Analyzer</a></li><li><a href="https://developer.android.com/studio/build/gradle-tips.html" >Gradle Tips and Recipes</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/debug/index.html"  es-lang="Depurar tu app" id-lang="Mendebug Aplikasi Anda" ja-lang="アプリのデバッグ" ko-lang="앱 디버깅" pt-br-lang="Depure seu aplicativo" zh-cn-lang="调试您的应用">Debug Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/debug/am-logcat.html"  es-lang="Escribir y visualizar registros" id-lang="Menuliskan dan Menampilkan Log" ja-lang="ログの出力と確認" ko-lang="로그 작성 및 보기" pt-br-lang="Escrever e ver registros" zh-cn-lang="写入和查看日志">Write and View Logs</a></li><li><a href="https://developer.android.com/studio/debug/stacktraces.html" >Analyze a Stack Trace</a></li><li><a href="https://developer.android.com/studio/debug/dev-options.html" >Configure Developer Options</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/debug/am-gpu-debugger.html" >Examine OpenGL ES Apps</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/debug/am-gpu-debugger-trace.html" >Capture a GPU Trace</a></li><li><a href="https://developer.android.com/studio/debug/am-gpu-debugger-analysis.html" >Analyze a Trace in the GPU Debugger</a></li></ul></li><li><a href="https://developer.android.com/studio/debug/am-screenshot.html" >Take a Screenshot</a></li><li><a href="https://developer.android.com/studio/debug/am-video.html" >Record a Video</a></li><li><a href="https://developer.android.com/studio/debug/bug-report.html" >Capture and Read Bug Reports</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/test/index.html"  es-lang="Probar tu app" id-lang="Menguji Aplikasi Anda" ja-lang="アプリのテスト" ko-lang="앱 테스트" pt-br-lang="Testar o aplicativo" zh-cn-lang="测试应用">Test Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/test/command-line.html" >Test from the Command Line</a></li><li><a href="https://developer.android.com/studio/test/espresso-test-recorder.html" >Create UI Tests with Espresso Test Recorder</a></li><li><a href="https://developer.android.com/studio/test/monkey.html" >UI/App Exerciser Monkey</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/test/monkeyrunner/index.html" >monkeyrunner Reference</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/test/monkeyrunner/MonkeyDevice.html" >MonkeyDevice</a></li><li><a href="https://developer.android.com/studio/test/monkeyrunner/MonkeyImage.html" >MonkeyImage</a></li><li><a href="https://developer.android.com/studio/test/monkeyrunner/MonkeyRunner.html" >MonkeyRunner</a></li></ul></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/index.html" >Profile Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/android-monitor.html" >Android Monitor Overview</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/am-basics.html" >Begin with Android Monitor Basics</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/am-memory.html" >Optimize Memory Use with the Memory Monitor</a></li><li><a href="https://developer.android.com/studio/profile/investigate-ram.html"  es-lang="Investiga el uso de RAM" id-lang="Menyelidiki Penggunaan RAM" ja-lang="RAM 使用状況の調査" ko-lang="RAM 사용량 조사" pt-br-lang="Investigar seu uso de RAM" zh-cn-lang="调查 RAM 使用情况">Investigate Your RAM Usage</a></li><li><a href="https://developer.android.com/studio/profile/am-cpu.html" >Tune CPU Use with the CPU Monitor</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/gpu.html" >Perfect GPU Use</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/am-gpu.html" >Analyze GPU Use with the GPU Monitor</a></li><li><a href="https://developer.android.com/studio/profile/dev-options-overdraw.html" >Visualize GPU Overdraw</a></li><li><a href="https://developer.android.com/studio/profile/dev-options-rendering.html" >Profile GPU Rendering</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/am-network.html" >Track Network Use with the Network Monitor</a></li><li><a href="https://developer.android.com/studio/profile/am-hprof.html" >Analyze the Java Heap with the HPROF Viewer and Analyzer</a></li><li><a href="https://developer.android.com/studio/profile/am-allocation.html" >Improve Memory Allocation with the Allocation Tracker</a></li><li><a href="https://developer.android.com/studio/profile/am-methodtrace.html" >Study the Call Stack with the Method Tracer</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/battery-historian.html" >Profile Battery Usage</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/battery-historian-charts.html" >Understand Historian Charts</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/monitor.html" >Android Device Monitor and DDMS Overview</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/ddms.html" >Use DDMS</a></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/traceview.html" >Trace Your Code Functions with Traceview</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/traceview-walkthru.html" >Walk through Traceview</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/profile/systrace.html" >Analyze UI Performance with Systrace</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/profile/systrace-walkthru.html" >Walk through Systrace</a></li><li><a href="https://developer.android.com/studio/profile/systrace-commandline.html" >Systrace Command Reference</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/heap-viewer-walkthru.html" >Inspect the Memory Heap with Heap Viewer</a></li><li><a href="https://developer.android.com/studio/profile/allocation-tracker-walkthru.html" >Track Memory Allocation with Allocation Tracker</a></li><li><a href="https://developer.android.com/studio/profile/gltracer.html" >Trace OpenGL Code</a></li></ul></li><li><a href="https://developer.android.com/studio/profile/hierarchy-viewer.html" >Profile Your Layout with Hierarchy Viewer</a></li><li><a href="https://developer.android.com/studio/profile/pixel-perfect.html" >Verify Your Design with Pixel Perfect</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/publish/index.html"  es-lang="Publica tu app" id-lang="Mempublikasikan Aplikasi Anda" ja-lang="アプリの公開" ko-lang="앱 게시" pt-br-lang="Publicar o aplicativo" zh-cn-lang="发布您的应用">Publish Your App</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/publish/preparing.html"  es-lang="Preparar el lanzamiento" id-lang="Mempersiapkan untuk Rilis" ja-lang="リリースの準備" ko-lang="릴리스 준비" pt-br-lang="Preparar para o lançamento" zh-cn-lang="准备发布">Prepare for Release</a></li><li><a href="https://developer.android.com/studio/publish/versioning.html"  es-lang="Cómo controlar la versión de tu app" id-lang="Menetapkan Versi Aplikasi Anda" ja-lang="アプリのバージョニング" ko-lang="앱 버전 지정" pt-br-lang="Controlar versões de aplicativos" zh-cn-lang="对您的应用进行版本控制">Version Your App</a></li><li><a href="https://developer.android.com/studio/publish/app-signing.html"  es-lang="Firmar tu app" id-lang="Menandatangani Aplikasi Anda" ja-lang="アプリの署名" ko-lang="앱 서명" pt-br-lang="Assinar o aplicativo" zh-cn-lang="签署您的应用">Sign Your App</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/command-line/index.html" >Command Line Tools</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/command-line/adb.html" >adb</a></li><li><a href="https://developer.android.com/studio/command-line/apksigner.html" >apksigner</a></li><li><a href="https://developer.android.com/studio/command-line/avdmanager.html" >avdmanager</a></li><li><a href="https://developer.android.com/studio/command-line/bmgr.html" >bmgr</a></li><li><a href="https://developer.android.com/studio/command-line/dumpsys.html" >dumpsys</a></li><li><a href="https://developer.android.com/studio/command-line/etc1tool.html" >etc1tool</a></li><li><a href="https://developer.android.com/studio/command-line/jobb.html" >jobb</a></li><li><a href="https://developer.android.com/studio/command-line/logcat.html" >logcat</a></li><li><a href="https://developer.android.com/studio/command-line/mksdcard.html" >mksdcard</a></li><li><a href="https://developer.android.com/studio/command-line/sdkmanager.html" >sdkmanager</a></li><li><a href="https://developer.android.com/studio/command-line/zipalign.html" >zipalign</a></li><li><a href="https://developer.android.com/studio/command-line/variables.html" >Environment Variables</a></li></ul></li><li class="nav-section"><div class="nav-section-header"><a href="https://developer.android.com/studio/releases/index.html" >Release Notes</a><span class="toggle-icon" tabindex="0"></span></div><ul><li><a href="https://developer.android.com/studio/releases/sdk-tools.html" >SDK Tools</a></li><li><a href="https://developer.android.com/studio/releases/emulator.html" >Android Emulator</a></li><li><a href="https://developer.android.com/studio/releases/build-tools.html" >SDK Build Tools</a></li><li><a href="https://developer.android.com/studio/releases/gradle-plugin.html" >Android Plugin for Gradle</a></li><li><a href="https://developer.android.com/studio/releases/platforms.html" >SDK Platform</a></li><li><a href="https://developer.android.com/studio/releases/platform-tools.html" >SDK Platform Tools</a></li></ul></li><li class="nav-section"><div class="nav-section-header empty"><a href="https://developer.android.com/studio/troubleshoot.html" >Troubleshoot</a></div></li><li class="nav-section"><div class="nav-section-header empty"><a href="https://developer.android.com/studio/known-issues.html" >Known Issues</a></div></li>
+            </ul>
+            
+          
+        </div>
+        
+        
+  
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim">
+  <li class="dac-nav-item">
+    <a class="dac-nav-back-button back-to-dev" tabindex="0"
+       es-lang="Volver al sitio para desarrolladores"
+       id-lang="Kembali ke Pengembang"
+       ja-lang="開発トップページに戻る"
+       ko-lang="개발자로 돌아가기"
+       pt-br-lang="Voltar aos Desenvolvedores"
+       zh-cn-lang="返回到开发者主页"
+       href="/develop/index.html">
+      <i class="dac-sprite dac-nav-back"></i>Back to Developers
+    </a>
+  </li>
+  <li class="dac-nav-item download">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/index.html"
+       es-lang="Descargar"
+       id-lang="Unduh"
+       ja-lang="ダウンロード"
+       ko-lang="다운로드"
+       pt-br-lang="Download"
+       zh-cn-lang="下载"
+       >Download</a>
+  </li>
+  <li class="dac-nav-item features">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/features.html"
+       es-lang="Funciones"
+       id-lang="Fitur"
+       ja-lang="機能"
+       ko-lang="기능"
+       pt-br-lang="Recursos"
+       zh-cn-lang="功能"
+       >Features</a>
+  </li>
+  <li class="dac-nav-item guide">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/intro/index.html"
+       es-lang="Guía del usuario"
+       id-lang="Panduan Pengguna"
+       ja-lang="ユーザーガイド"
+       ko-lang="사용자 가이드"
+       pt-br-lang="Guia do usuário"
+       zh-cn-lang="用户指南"
+       >User Guide</a>
+  </li>
+  <li class="dac-nav-item preview">
+    <a class="dac-nav-link" href="https://developer.android.com/studio/preview/index.html"
+       es-lang="Vista Previa"
+       id-lang="Pratinjau"
+       ja-lang="プレビュー"
+       ko-lang="미리보기"
+       pt-br-lang="Visualização"
+       zh-cn-lang="预览"
+       >Preview</a>
+  </li>
+</ul>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+      <div class="content-header">
+        <ul class="dac-header-crumbs"></ul>
+        <!-- Breadcrumb Setup -->
+        <script>$('.dac-nav-list').dacCurrentPage().dacCrumbs();</script>
+        <h1 itemprop="name">Command Line Tools</h1>
+      
+        
+      
+      </div>
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      
+
+<div id="qv-wrapper">
+<div id="qv">
+  <h2>In this document</h2>
+  <ol>
+    <li><a href="#tools-sdk">Android SDK Tools</a></li>
+    <li><a href="#tools-build">Android SDK Build Tools</a></li>
+    <li><a href="#tools-platform">Android SDK Platform Tools</a></li>
+    <li><a href="#tools-emulator">Android Emulator</a></li>
+  </ol>
+</div>
+</div>
+
+<p>The Android SDK is composed of multiple packages that are required for app development.
+This page lists the most important command line tools that are
+available, organized by the packages in which they're delivered.</p>
+
+<p>You can install and update each package using
+Android Studio's <a href="https://developer.android.com/studio/intro/update.html#sdk-manager">SDK Manager</a>
+or the <a href="https://developer.android.com/studio/command-line/sdkmanager.html"><code>sdkmanager</code></a>
+command line tool.
+All of the packages are downloaded into your Android SDK directory, which
+you can locate as follows:</p>
+<ol>
+  <li>In Android Studio, click <b>File > Project Structure</b>.</li>
+  <li>Select <b>SDK Location</b> in the left pane.
+  The path is shown under <b>Android SDK location</b>.</li>
+</ol>
+
+<h2 id="tools-sdk">Android SDK Tools</h2>
+
+<p>
+Located in: <code><var>android_sdk</var>/tools/bin/</code><br>
+See also: <a href="https://developer.android.com/releases/sdk-tools.html">SDK Tools release notes</a>
+</p>
+
+<p>This package is platform independent
+and required no matter which Android platform you are developing on.</p>
+
+<p>If you just need these tools because you're not using Android Studio, you can
+<a href="https://developer.android.com/studio/index.html#command-tools">download the SDK Tools here</a>.</p>
+
+<dl>
+  <dt><code><a href="https://developer.android.com/studio/command-line/avdmanager.html">avdmanager</a></code></dt>
+    <dd>Allows you to create and manage Android Virtual Devices (AVDs)
+    from the command line.</dd>
+
+  <dt><code><a href="https://developer.android.com/studio/command-line/jobb.html">jobb</a></code></dt>
+    <dd>Allows you to build encrypted and unencrypted
+    <a href="https://developer.android.com/google/play/expansion-files.html">APK expansion files</a> in Opaque
+    Binary Blob (OBB) format.</dd>
+
+  <dt><code><a href="https://developer.android.com/studio/write/lint.html">lint</a></code></dt>
+    <dd>A code scanning tool that can help you to identify and correct problems
+    with the structural quality of your code.</dd>
+
+  <dt><code><a href="https://developer.android.com/studio/test/monkeyrunner/">monkeyrunner</a></code>
+    <dd>Provides the command line interface for running program that can install
+    an Android app or test package, run it, send keystrokes to it, takes
+    screenshots, and more.</dd>
+
+  <dt><code><a href="https://developer.android.com/studio/command-line/sdkmanager.html">sdkmanager</a></code></dt>
+    <dd>Allows you to view, install, update, and uninstall packages for the Android SDK.</dd>
+</dl>
+
+<p>This package includes other tools that you don't need to invoke from the
+command line (such as ProGuard for <a
+href="https://developer.android.com/studio/build/shrink-code.html">code shrinking and obfuscation</a>).</p>
+
+
+<h2 id="tools-build">Android SDK Build Tools</h2>
+
+<p>
+Located in: <code><var>android_sdk</var>/build-tools/<var>version</var>/</code><br>
+See also: <a href="https://developer.android.com/releases/build-tools.html">SDK Build Tools release notes</a>
+</p>
+
+<p>This package is required to build Android apps. Most of the tools in here are
+invoked by the build tools and not intended for you. However, the following
+command line tools might be useful:</p>
+
+<dl>
+  <dt><a href="https://developer.android.com/studio/command-line/apksigner.html"><code>apksigner</code></a></dt>
+    <dd>Signs APKs and checks whether APK signatures will be verified
+    successfully on all platform versions that a given APK supports.</dd>
+
+  <dt><a href="https://developer.android.com/studio/command-line/zipalign.html"><code>zipalign</code></a></dt>
+    <dd>Optimizes APK files by ensuring that all uncompressed data starts with
+    a particular alignment relative to the start of the file.</dd>
+</dl>
+
+<p class="note"><b>Note:</b> You can have multiple versions of the build tools
+to build your app for different Android versions.</p>
+
+
+<h2 id="tools-platform">Android SDK Platform Tools</h2>
+
+<p>
+Located in: <code><var>android_sdk</var>/platform-tools/</code><br>
+See also: <a href="https://developer.android.com/releases/platform-tools.html">SDK Platform Tools release notes</a>
+</p>
+
+<p>These tools are updated for every new version of the Android platform to support new features
+(and sometimes more often to fix or improve the tools), and each update
+is backward compatible with older platform versions.</p>
+
+<p>In addition to downloading from the SDK Manager, you can
+<a href="https://developer.android.com/studio/releases/platform-tools.html">download the SDK Platform Tools here</a>.</p>
+
+<dl>
+  <dt><a href="https://developer.android.com/studio/command-line/adb.html"><code>adb</code></a></dt>
+    <dd>Android Debug Bridge (adb) is a versatile tool that lets you manage the state of an
+    emulator instance or Android-powered device. You can also use it to install an APK on a
+    device.</dd>
+
+  <dt><a href="https://developer.android.com/studio/command-line/etc1tool.html"><code>etc1tool</code></a></dt>
+    <dd>A command line utility that lets you encode PNG images to the ETC1
+    compression standard and decode ETC1 compressed images back to PNG.</dd>
+
+  <dt><code>fastboot</code></dt>
+    <dd>Flashes a device with platform and other system images. For flashing instructions,
+    see <a href="https://developers.google.com/android/images">Factory Images for Nexus and
+    Pixel Devices</a>.</dd>
+
+  <dt><a href="https://developer.android.com/studio/command-line/logcat.html"><code>logcat</code></a></dt>
+    <dd>This is a tool invoked via adb to view app and system logs.</dd>
+
+</dl>
+
+<h2 id="tools-emulator">Android Emulator</h2>
+
+<p>
+Located in: <code><var>android_sdk</var>/emulator/</code><br>
+See also: <a href="https://developer.android.com/releases/emulator.html">Android Emulator release notes</a>
+</p>
+
+  <p>This package is required to use the Android Emulator. It includes the following:.</p>
+
+  <dl>
+    <dt><code><a href="https://developer.android.com/studio/run/emulator-commandline.html">emulator</a></code></dt>
+    <dd>A QEMU-based device-emulation tool that you can use to debug and test
+        your applications in an actual Android run-time environment.</dd>
+
+  <dt><code><a href="https://developer.android.com/studio/command-line/mksdcard.html">mksdcard</a></code></dt>
+    <dd>Helps you create a disk image that you can use with the emulator,
+    to simulate the presence of an external storage card (such as an SD card).
+    </dd>
+</dl>
+
+<p class="note"><b>Note:</b> Prior to revision 25.3.0, the emulator tools were included with the
+SDK Tools package.</p>
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="https://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo">
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="https://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo">
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="https://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo">
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&entry.1909689089&entry.208743710&entry.408796755&entry.1341430893&entry.594931249&entry.1640656812&entry.1759804042&entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    <!-- TODO(akassay) Update all DAC js to use the class instead of the id b/30368561 -->
+    <form class="devsite-utility-footer-language" id="setlang" action="/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="l1UEMfTFif4wEHYg6teawnlniJ5RwnBvtijerjkDMgQ6MTUwNTM3NzE2OTYwODEyMA" />
+      <input type="hidden" name="next" value="/studio/command-line/index.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+            >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+             selected="selected" >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email 地址</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="https://developer.android.com/ytblogger_lists_unified.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/android_metadata_en.js?v=2017091408" defer></script>
+  
+  <script src="https://developer.android.com/reference/lists.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/reference/gms_lists.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/reference/android/support/wearable/lists.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/reference/android/support/test/lists.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/reference/android/support/constraint/lists.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/reference/android/arch/lists.js?v=2017091408" defer></script>
+  <script src="https://developer.android.com/_static2/2273a78347/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_zh-cn.js?v=2017091408" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

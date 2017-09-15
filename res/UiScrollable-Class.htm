@@ -1,0 +1,5254 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/Article">
+<head>
+
+  
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+
+
+
+
+<script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script>
+
+<meta charset="utf-8">
+
+
+
+<meta name="xsrf_token" content="jNwp_S8YeVVj_9hC11E9Eat-i1sTlH54Dutq97PRWBw6MTUwNTQ0MDE5MTMwOTY0MA" />
+
+  
+    <link rel="canonical" href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">
+  
+
+  
+    <link rel="alternate" href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html" hreflang="en">
+  
+    <link rel="alternate" href="https://developer.android.google.cn/reference/android/support/test/uiautomator/UiScrollable.html" hreflang="en-cn">
+  
+
+  <link rel="alternate" href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html" hreflang="x-default">
+
+
+
+
+<link rel="shortcut icon" href="https://developer.android.com/_static/c4e47240b7/images/android/favicon.png">
+
+<link rel="apple-touch-icon" href="https://developer.android.com/_static/c4e47240b7/images/android/touchicon-180.png">
+
+
+<title>
+
+  UiScrollable | Android Developers
+
+</title>
+
+
+
+  <meta itemprop="dateModified" content="2017-07-24T21:15:23.739840">
+
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+    title="roboto">
+
+
+
+
+
+
+
+<link href="https://developer.android.com/static/css/default.css?v=2017091501" rel="stylesheet" type="text/css">
+<!-- JAVASCRIPT -->
+<script src="https://developer.android.com/_static/c4e47240b7/js/android_3p-bundle.js" type="text/javascript"></script>
+<script src="https://developer.android.com/_static/c4e47240b7/js/script_foot_closure_android__zh_cn.js"></script>
+<script src="https://developer.android.com/_static/c4e47240b7/js/script_foot_android.js"></script>
+
+<script type="text/javascript">
+  var toRoot = '/';
+  devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": false, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "c95bf81627eb648c2345aec06a66200a": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+
+  var replaceBlog = false;
+  var replaceYouTube = false;
+  var siteDefaultLocale = 'en';
+
+  var ANDROID_LANGUAGES = [
+      'id','de','en','es','es-419','fr','pt-br','vi','tr','ru','th','ja','zh-cn','zh-tw','ko'
+  ];
+</script>
+<script src="https://developer.android.com/static/js/docs.js?v=2017091501" type="text/javascript"></script>
+
+
+</head>
+
+<body class="gc-documentation
+            api apilevel-
+            
+              develop
+              reference
+            
+            ">
+  
+
+
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-2&quot;}">
+  
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Reference&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-5831155-1&quot;}">
+  
+
+
+
+  
+  
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "US", "language": {"requested": "zh-cn", "served": "en"}, "projectName": "Reference", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+  
+
+
+
+  
+  <a href="#top" id="skip-to-main">Skip to content</a>
+  <header id="header-wrapper">
+    <div class="dac-header" id="header">
+      <div class="dac-header-inner">
+        
+        <a class="dac-nav-toggle" data-dac-toggle-nav href="" title="Open navigation">
+          <span class="dac-nav-hamburger">
+            <span class="dac-nav-hamburger-top"></span>
+            <span class="dac-nav-hamburger-mid"></span>
+            <span class="dac-nav-hamburger-bot"></span>
+          </span>
+        </a>
+        
+        <a class="dac-header-logo" href="https://developer.android.com/index.html">
+          <img class="dac-header-logo-image" src="https://developer.android.com/static/images/android_logo.png"
+              srcset="https://developer.android.com/static/images/android_logo_2x.png 2x"
+              width="32" height="36" alt="Android"> Developers</a>
+        <ul class="dac-header-tabs">
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/design/index.html"
+               zh-tw-lang="設計"
+               zh-cn-lang="设计"
+               ru-lang="Проектирование"
+               ko-lang="디자인"
+               ja-lang="設計"
+               es-lang="Diseñar">
+              
+              Design</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/develop/index.html"
+               zh-tw-lang="開發"
+               zh-cn-lang="开发"
+               ru-lang="Разработка"
+               ko-lang="개발"
+               ja-lang="開発"
+               es-lang="Desarrollar">
+              
+              Develop</a>
+          </li>
+          <li>
+            <a class="dac-header-tab" href="https://developer.android.com/distribute/index.html"
+               zh-tw-lang="發佈"
+               zh-cn-lang="分发"
+               ru-lang="Распространение"
+               ko-lang="배포"
+               ja-lang="配布"
+               es-lang="Distribuir">
+              
+              Distribute</a>
+          </li>
+        </ul>
+
+
+        
+
+        <a class="dac-header-console-btn gc-analytics-event" href="https://play.google.com/apps/publish/"
+           data-category="User" data-action="Console" data-label="Clicked">
+          
+          <img src="https://developer.android.com/static/images/developer-console-icon.svg" width="18" height="19" alt="">Play Console</a>
+        
+
+<form data-search="" class="dac-header-search">
+  <button class="dac-header-search-close" data-search-close="">
+    <i class="dac-sprite dac-back-arrow"></i>
+  </button>
+
+  <div class="dac-header-search-inner">
+    <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+    
+    <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="搜索">
+    <button class="dac-header-search-clear dac-hidden" data-search-clear="">
+      <i class="dac-sprite dac-close-black"></i>
+    </button>
+  </div>
+</form>
+
+        
+      </div><!--/.header-wrap.wrap-->
+    </div><!--/.header-->
+
+    
+
+<div id="search-results" class="dac-search-results">
+  <div id="dac-search-results-history" class="dac-search-results-history">
+    <div class="wrap dac-search-results-history-wrap">
+      <div class="cols">
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Most visited</h2>
+          <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+
+        <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+          
+          <h2>Recently visited</h2>
+          <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dac-search-results-content" class="dac-search-results-content">
+    <div class="dac-search-results-metadata wrap">
+      <div class="dac-search-results-for">
+          <h2>
+          
+          Results for <span id="search-results-for"></span>
+          </h2>
+      </div>
+
+      <div id="dac-search-results-hero"></div>
+
+      <div class="dac-search-results-hero cols">
+        <div id="dac-search-results-reference" class="col-6of6 col-tablet-2of2 col-mobile-1of1">
+          <div class="suggest-card reference no-display">
+            <ul class="dac-search-results-reference">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols dac-search-results-cse">
+        <script src="https://cse.google.com/cse.js?cx=000521750095050289010:zpcpi1ea4s8" async></script>
+        <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  <a name="navigation" tabindex=0 class="nav-start-marker">navigation</a>
+  <nav class="dac-nav">
+    <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
+        <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" tabindex=0 data-swap-button>
+          
+          
+          <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">返回</span>
+        </a>
+
+        <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope
+            itemtype="http://schema.org/SiteNavigationElement">
+          
+          
+            
+              
+              <button data-fullscreen="" class="dac-nav-fullscreen">
+                <i class="dac-sprite dac-fullscreen"></i>
+              </button>
+              <script>$('[data-fullscreen]').dacFullscreen();</script>
+              <div id="devdoc-nav">
+                <div id="api-nav-header">
+                  <div id="api-level-toggle">
+                    <label for="apiLevelCheckbox" class="disabled"
+                        
+                        title="Select your target API level to dim unavailable APIs">
+                        
+                        API:
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="apiLevelSelector"></select>
+                    </div>
+                  </div><!-- end toggle -->
+                  <div id="api-nav-title">
+                    <select id="reference-selector">
+                      
+                      <option value="android">Android Platform</option>
+                      
+                      <option value="android/arch">Architecture Components</option>
+                      
+                      <option value="android/support/constraint">Constraint Library</option>
+                      
+                      <option value="com/android/billingclient">Play Billing Library</option>
+                      
+                      <option value="android/support/test">Test Support Library</option>
+                      
+                      <option value="android/support/wearable">Wearable Library</option>
+                    </select>
+                  </div>
+                </div><!-- end nav header -->
+                <script>
+                  buildApiLevelSelector();
+                  initReferenceSelector();
+                </script>
+                <div class="dac-reference-nav" data-reference-tree="">
+                  <ul class="dac-reference-nav-list" data-reference-namespaces="">
+                    <li class="api no-toggle"><a href="https://developer.android.com/reference/android/support/test/classes.html" >Class Index</a></li><li class="api no-toggle"><a href="https://developer.android.com/reference/android/support/test/packages.html" >Package Index</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/package-summary.html" >android.support.test</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/annotation/package-summary.html" >android.support.test.annotation</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/package-summary.html" >android.support.test.espresso</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/accessibility/package-summary.html" >android.support.test.espresso.accessibility</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/action/package-summary.html" >android.support.test.espresso.action</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/assertion/package-summary.html" >android.support.test.espresso.assertion</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/base/package-summary.html" >android.support.test.espresso.base</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/contrib/package-summary.html" >android.support.test.espresso.contrib</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/idling/package-summary.html" >android.support.test.espresso.idling</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/idling/concurrent/package-summary.html" >android.support.test.espresso.idling.concurrent</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/idling/net/package-summary.html" >android.support.test.espresso.idling.net</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/intent/package-summary.html" >android.support.test.espresso.intent</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/intent/matcher/package-summary.html" >android.support.test.espresso.intent.matcher</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/intent/rule/package-summary.html" >android.support.test.espresso.intent.rule</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/matcher/package-summary.html" >android.support.test.espresso.matcher</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/remote/package-summary.html" >android.support.test.espresso.remote</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/util/package-summary.html" >android.support.test.espresso.util</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/action/package-summary.html" >android.support.test.espresso.web.action</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/assertion/package-summary.html" >android.support.test.espresso.web.assertion</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/bridge/package-summary.html" >android.support.test.espresso.web.bridge</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/matcher/package-summary.html" >android.support.test.espresso.web.matcher</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/model/package-summary.html" >android.support.test.espresso.web.model</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/sugar/package-summary.html" >android.support.test.espresso.web.sugar</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/espresso/web/webdriver/package-summary.html" >android.support.test.espresso.web.webdriver</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/filters/package-summary.html" >android.support.test.filters</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/jank/package-summary.html" >android.support.test.jank</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/rule/package-summary.html" >android.support.test.rule</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/rule/logging/package-summary.html" >android.support.test.rule.logging</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/rule/provider/package-summary.html" >android.support.test.rule.provider</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/runner/package-summary.html" >android.support.test.runner</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/runner/intent/package-summary.html" >android.support.test.runner.intent</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/runner/intercepting/package-summary.html" >android.support.test.runner.intercepting</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/runner/lifecycle/package-summary.html" >android.support.test.runner.lifecycle</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/runner/permission/package-summary.html" >android.support.test.runner.permission</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/runner/screenshot/package-summary.html" >android.support.test.runner.screenshot</a></li><li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/package-summary.html" >android.support.test.uiautomator</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          
+        </div>
+        
+        
+          
+
+
+
+<ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim" tabindex=0>
+  <li class="dac-nav-item home">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/index.html">首页</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary about">
+      <li class="dac-nav-item versions">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/about/versions/o/index.html">Android</a>
+      </li>
+      <li class="dac-nav-item wear">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/wear/index.html">Wear</a>
+      </li>
+      <li class="dac-nav-item tv">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/tv/index.html">TV</a>
+      </li>
+      <li class="dac-nav-item auto">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/auto/index.html">Auto</a>
+      </li>
+      
+      <li class="dac-nav-item chrome-os">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/chrome-os/index.html">Chrome OS</a>
+      </li>
+      
+      <li class="dac-nav-item things">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/things/index.html">Things</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item design">
+    <a class="dac-nav-link" href="https://developer.android.com/design/index.html"
+       zh-tw-lang="設計"
+       zh-cn-lang="设计"
+       ru-lang="Проектирование"
+       ko-lang="디자인"
+       ja-lang="設計"
+       es-lang="Diseñar">
+      
+      Design</a>
+  </li>
+  <li class="dac-nav-item develop">
+    <a class="dac-nav-link" href="https://developer.android.com/develop/index.html"
+       zh-tw-lang="開發"
+       zh-cn-lang="开发"
+       ru-lang="Разработка"
+       ko-lang="개발"
+       ja-lang="開発"
+       es-lang="Desarrollar">
+      
+      Develop</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary develop">
+      <li class="dac-nav-item training">
+        <a class="dac-nav-link" href="https://developer.android.com/training/index.html"
+           zh-tw-lang="訓練課程"
+           zh-cn-lang="培训"
+           ru-lang="Курсы"
+           ko-lang="교육"
+           ja-lang="トレーニング"
+           es-lang="Capacitación">
+            
+            Training</a>
+      </li>
+      <li class="dac-nav-item guide">
+        <a class="dac-nav-link" href="https://developer.android.com/guide/index.html"
+           zh-tw-lang="API 指南"
+           zh-cn-lang="API 指南"
+           ru-lang="Руководства по API"
+           ko-lang="API 가이드"
+           ja-lang="API ガイド"
+           es-lang="Guías de la API">
+          
+          API Guides</a>
+      </li>
+      <li class="dac-nav-item reference">
+        <a class="dac-nav-link" href="https://developer.android.com/reference/packages.html"
+           zh-tw-lang="參考資源"
+           zh-cn-lang="参考"
+           ru-lang="Справочник"
+           ko-lang="참조문서"
+           ja-lang="リファレンス"
+           es-lang="Referencia">
+          
+          Reference</a>
+      </li>
+      <li class="dac-nav-item samples">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/samples/index.html">Samples</a>
+      </li>
+      <li class="dac-nav-item libraries">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/topic/libraries/index.html">Libraries</a></li>
+      <li class="dac-nav-item studio">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+      <li class="dac-nav-item ndk">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/ndk/index.html">Android NDK</a></li>
+      <li class="dac-nav-item google">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/google/index.html">Google Services</a>
+      </li>
+      <li class="dac-nav-item quality-guidelines">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/develop/quality-guidelines/index.html">Quality Guidelines</a>
+      </li>
+      <li class="dac-nav-item kotlin">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/kotlin/index.html">Kotlin</a>
+       </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item distribute">
+    <a class="dac-nav-link" href="https://developer.android.com/distribute/index.html"
+       zh-tw-lang="發佈"
+       zh-cn-lang="分发"
+       ru-lang="Распространение"
+       ko-lang="배포"
+       ja-lang="配布"
+       de-lang="Vertrieb"
+       es-lang="Distribuir"
+       es-419-lang="Distribuye"
+       fr-lang="Distribuer"
+       id-lang="Distribusikan"
+       pt-br-lang="Distribuição"
+       th-lang="จัดจำหน่าย"
+       tr-lang="Dağıtma"
+       vi-lang="Phân phối">
+      
+      Distribute</a>
+    <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider" tabindex=0></i>
+    <ul class="dac-nav-secondary distribute">
+      <li class="dac-nav-item google-play">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/google-play/index.html">Google Play</a>
+      </li>
+      <li class="dac-nav-item console">
+        
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/console/index.html">Play Console</a>
+      </li>
+      <li class="dac-nav-item best-practices">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/best-practices/index.html"
+          es-419-lang="Recomendaciones"
+          fr-lang="Bonnes pratiques"
+          id-lang="Praktik terbaik"
+          ja-lang="おすすめの方法"
+          ko-lang="권장사항"
+          pt-br-lang="Práticas recomendadas"
+          ru-lang="Рекомендации"
+          th-lang="จัดจำหน่าย"
+          tr-lang="En iyi uygulamalar"
+          vi-lang="Các phương pháp hay nhất"
+          zh-cn-lang="最佳做法"
+          zh-tw-lang="最佳做法">
+          
+          Best practices</a>
+      </li>
+      <li class="dac-nav-item marketing-tools">
+        <a class="dac-nav-link" href="https://developer.android.com/distribute/marketing-tools/index.html"
+          de-lang="Marketing-Tools"
+          es-419-lang="Herramientas de marketing"
+          fr-lang="Outils marketing"
+          id-lang="Fitur pemasaran"
+          ja-lang="マーケティング ツール"
+          ko-lang="마케팅 도구"
+          pt-br-lang="Ferramentas de marketing"
+          ru-lang="Маркетинговые инструменты"
+          th-lang="เครื่องมือการตลาด"
+          tr-lang="Pazarlama araçları"
+          vi-lang="Công cụ tiếp thị"
+          zh-cn-lang="营销工具"
+          zh-tw-lang="行銷工具">
+          
+          Marketing tools</a>
+      </li>
+      <li class="dac-nav-item policy-center">
+        
+        <a class="dac-nav-link" href="https://play.google.com/about/developer-content-policy/" target="_blank">Policy center</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dac-nav-item stories">
+    
+    <a class="dac-nav-link" href="https://developer.android.com/stories/index.html">Stories</a>
+  </li>
+  
+</ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <a name="top" tabindex="0"></a>
+  
+  <div class="wrap clearfix" id="body-content">
+  
+    
+      
+    
+    <div class="jd-descr " itemprop="articleBody">
+      <div id="doc-api-level" class="" style="display:none"></div>
+
+
+
+
+<div id="naMessage"></div>
+
+<div id="api-info-block">
+<div class="api-level">
+  
+  
+  
+
+</div>
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+   
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+Summary:
+
+
+
+
+
+
+  <a href="#inhconstants">Inherited Constants</a>
+  
+
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+  &#124; <a href="#promethods">Protected Methods</a>
+  
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+</div><!-- end api-info-block -->
+
+<div class="api apilevel-" id="jd-content">
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<h1 class="api-title">UiScrollable</h1>
+<p>
+<code class="api-signature">
+  public
+  
+  
+  
+  class
+  UiScrollable
+</code>
+<br>
+
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+    extends <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html">UiCollection</a>
+  
+  
+  
+</code>
+
+<code class="api-signature">
+  
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
+    
+    <td colspan="4" class="jd-inheritance-class-cell"><a href="https://developer.android.com/reference/java/lang/Object.html">java.lang.Object</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="3" class="jd-inheritance-class-cell"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">android.support.test.uiautomator.UiObject</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;</td>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="2" class="jd-inheritance-class-cell"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html">android.support.test.uiautomator.UiCollection</a>
+    </td>
+  </tr>
+  
+
+  <tr>
+    
+      <td class="jd-inheritance-space">&nbsp;</td>
+    
+      <td class="jd-inheritance-space">&nbsp;</td>
+    
+      <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+    
+    <td colspan="1" class="jd-inheritance-class-cell">android.support.test.uiautomator.UiScrollable
+    </td>
+  </tr>
+  
+
+</table>
+  
+
+    
+
+<br><hr>
+
+
+  <p>UiScrollable is a <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html">UiCollection</a></code> and provides support for searching
+ for items in scrollable layout elements. This class can be used with
+ horizontally or vertically scrollable controls.</p>
+
+
+
+
+
+
+
+
+
+<h2 class="api-section">Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="inhconstants" class="responsive constants inhtable">
+<tr><th><h3>Inherited constants</h3></th></tr>
+
+
+
+
+  <tr class="api apilevel-" >
+  <td>
+  <a href="#" id="inherited-constants-android.support.test.uiautomator.UiObject" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-constants-android.support.test.uiautomator.UiObject-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="https://developer.android.com/assets/images/styles/disclosure_down.png" />
+  </a>From
+  class
+  <code>
+    <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">android.support.test.uiautomator.UiObject</a>
+  </code>
+  <div id="inherited-constants-android.support.test.uiautomator.UiObject">
+    <div id="inherited-constants-android.support.test.uiautomator.UiObject-list"
+          class="jd-inheritedlinks">
+    </div>
+    <div id="inherited-constants-android.support.test.uiautomator.UiObject-summary" style="display: none;">
+      <table class="jd-sumtable-expando responsive">
+      
+
+    
+    <tr class="api apilevel-" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#FINGER_TOUCH_HALF_WIDTH">FINGER_TOUCH_HALF_WIDTH</a></code>
+          <p>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><code>int</code></td>
+        <td width="100%">
+          <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#SWIPE_MARGIN_LIMIT">SWIPE_MARGIN_LIMIT</a></code>
+          <p>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><code>long</code></td>
+        <td width="100%">
+          <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#WAIT_FOR_EVENT_TMEOUT">WAIT_FOR_EVENT_TMEOUT</a></code>
+          <p><em>
+      This constant is deprecated.
+    use <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/Configurator.html#setScrollAcknowledgmentTimeout(long)">setScrollAcknowledgmentTimeout(long)</a></code>
+</em>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><code>long</code></td>
+        <td width="100%">
+          <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#WAIT_FOR_SELECTOR_POLL">WAIT_FOR_SELECTOR_POLL</a></code>
+          <p>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><code>long</code></td>
+        <td width="100%">
+          <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#WAIT_FOR_SELECTOR_TIMEOUT">WAIT_FOR_SELECTOR_TIMEOUT</a></code>
+          <p><em>
+      This constant is deprecated.
+    use <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/Configurator.html#setWaitForSelectorTimeout(long)">setWaitForSelectorTimeout(long)</a></code>
+</em>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+    <tr class="api apilevel-" >
+        <td><code>long</code></td>
+        <td width="100%">
+          <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#WAIT_FOR_WINDOW_TMEOUT">WAIT_FOR_WINDOW_TMEOUT</a></code>
+          <p>
+          
+    
+</p>
+        </td>
+    </tr>
+    
+    
+</table>
+    </div>
+  </div>
+  </td></tr>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="responsive constructors">
+<tr><th colspan="2"><h3>Public constructors</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#UiScrollable(android.support.test.uiautomator.UiSelector)">UiScrollable</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> container)
+      </code>
+      
+        <p>Constructor.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#flingBackward()">flingBackward</a>()
+      </code>
+      
+        <p>Performs a backwards fling action with the default number of fling
+ steps (5).
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#flingForward()">flingForward</a>()
+      </code>
+      
+        <p>Performs a forward fling with the default number of fling steps (5).
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#flingToBeginning(int)">flingToBeginning</a>(int maxSwipes)
+      </code>
+      
+        <p>Performs a fling gesture to reach the beginning of a scrollable layout element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#flingToEnd(int)">flingToEnd</a>(int maxSwipes)
+      </code>
+      
+        <p>Performs a fling gesture to reach the end of a scrollable layout element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByDescription</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Searches for a child element in the present scrollable container.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String, boolean)">getChildByDescription</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text, boolean allowScrollSearch)
+      </code>
+      
+        <p>Searches for a child element in the present scrollable container.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByInstance(android.support.test.uiautomator.UiSelector, int)">getChildByInstance</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, int instance)
+      </code>
+      
+        <p>Searches for a child element in the present scrollable container that
+ matches the selector you provided.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String, boolean)">getChildByText</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text, boolean allowScrollSearch)
+      </code>
+      
+        <p>Searches for a child element in the present scrollable container.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByText</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Searches for a child element in the present scrollable
+ container.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getMaxSearchSwipes()">getMaxSearchSwipes</a>()
+      </code>
+      
+        <p>Gets the maximum number of scrolls allowed when performing a
+ scroll action in search of a child element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        double</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getSwipeDeadZonePercentage()">getSwipeDeadZonePercentage</a>()
+      </code>
+      
+        <p>Returns the percentage of a widget's size that's considered as a no-touch
+ zone when swiping.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollBackward(int)">scrollBackward</a>(int steps)
+      </code>
+      
+        <p>Performs a backward scroll.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollBackward()">scrollBackward</a>()
+      </code>
+      
+        <p>Performs a backward scroll with the default number of scroll steps (55).
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollDescriptionIntoView(java.lang.String)">scrollDescriptionIntoView</a>(<a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Performs a forward scroll action on the scrollable layout element until
+ the content-description is found, or until swipe attempts have been exhausted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollForward(int)">scrollForward</a>(int steps)
+      </code>
+      
+        <p>Performs a forward scroll.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollForward()">scrollForward</a>()
+      </code>
+      
+        <p>Performs a forward scroll with the default number of scroll steps (55).
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollIntoView(android.support.test.uiautomator.UiSelector)">scrollIntoView</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> selector)
+      </code>
+      
+        <p>Perform a scroll forward action to move through the scrollable layout 
+ element until a visible item that matches the selector is found.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollIntoView(android.support.test.uiautomator.UiObject)">scrollIntoView</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> obj)
+      </code>
+      
+        <p>Perform a forward scroll action to move through the scrollable layout element until
+ a visible item that matches the <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> is found.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollTextIntoView(java.lang.String)">scrollTextIntoView</a>(<a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Performs a forward scroll action on the scrollable layout element until
+ the text you provided is visible, or until swipe attempts have been exhausted.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollToBeginning(int)">scrollToBeginning</a>(int maxSwipes)
+      </code>
+      
+        <p>Scrolls to the beginning of a scrollable layout element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollToBeginning(int, int)">scrollToBeginning</a>(int maxSwipes, int steps)
+      </code>
+      
+        <p>Scrolls to the beginning of a scrollable layout element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollToEnd(int)">scrollToEnd</a>(int maxSwipes)
+      </code>
+      
+        <p>Scrolls to the end of a scrollable layout element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollToEnd(int, int)">scrollToEnd</a>(int maxSwipes, int steps)
+      </code>
+      
+        <p>Scrolls to the end of a scrollable layout element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#setAsHorizontalList()">setAsHorizontalList</a>()
+      </code>
+      
+        <p>Set the direction of swipes to be horizontal when performing scroll actions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#setAsVerticalList()">setAsVerticalList</a>()
+      </code>
+      
+        <p>Set the direction of swipes to be vertical when performing scroll actions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#setMaxSearchSwipes(int)">setMaxSearchSwipes</a>(int swipes)
+      </code>
+      
+        <p>Sets the maximum number of scrolls allowed when performing a
+ scroll action in search of a child element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#setSwipeDeadZonePercentage(double)">setSwipeDeadZonePercentage</a>(double swipeDeadZonePercentage)
+      </code>
+      
+        <p>Sets the percentage of a widget's size that's considered as no-touch
+ zone when swiping.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="promethods" class="reponsive methods">
+<tr><th colspan="2"><h3>Protected methods</h3></th></tr>
+
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#exists(android.support.test.uiautomator.UiSelector)">exists</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> selector)
+      </code>
+      
+        <p>Used privately when performing swipe searches to decide if an element has become
+ visible or not.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+</table>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="methods inhtable">
+<tr><th><h3>Inherited methods</h3></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-android.support.test.uiautomator.UiCollection" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-android.support.test.uiautomator.UiCollection-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="https://developer.android.com/assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html">android.support.test.uiautomator.UiCollection</a>
+  
+</code>
+<div id="inherited-methods-android.support.test.uiautomator.UiCollection">
+  <div id="inherited-methods-android.support.test.uiautomator.UiCollection-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-android.support.test.uiautomator.UiCollection-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html#getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByDescription</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Searches for child UI element within the constraints of this UiCollection <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code>
+ selector.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html#getChildByInstance(android.support.test.uiautomator.UiSelector, int)">getChildByInstance</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, int instance)
+      </code>
+      
+        <p>Searches for child UI element within the constraints of this UiCollection <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code>
+ selector.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html#getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByText</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Searches for child UI element within the constraints of this UiCollection <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code>
+ selector.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html#getChildCount(android.support.test.uiautomator.UiSelector)">getChildCount</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern)
+      </code>
+      
+        <p>Counts child UI element instances matching the <code>childPattern</code>
+ argument.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-android.support.test.uiautomator.UiObject" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-android.support.test.uiautomator.UiObject-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="https://developer.android.com/assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">android.support.test.uiautomator.UiObject</a>
+  
+</code>
+<div id="inherited-methods-android.support.test.uiautomator.UiObject">
+  <div id="inherited-methods-android.support.test.uiautomator.UiObject-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-android.support.test.uiautomator.UiObject-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#clearTextField()">clearTextField</a>()
+      </code>
+      
+        <p>Clears the existing text contents in an editable field.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#click()">click</a>()
+      </code>
+      
+        <p>Performs a click at the center of the visible bounds of the UI element represented
+ by this UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#clickAndWaitForNewWindow()">clickAndWaitForNewWindow</a>()
+      </code>
+      
+        <p>Waits for window transitions that would typically take longer than the
+ usual default timeouts.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#clickAndWaitForNewWindow(long)">clickAndWaitForNewWindow</a>(long timeout)
+      </code>
+      
+        <p>Performs a click at the center of the visible bounds of the UI element represented
+ by this UiObject and waits for window transitions.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#clickBottomRight()">clickBottomRight</a>()
+      </code>
+      
+        <p>Clicks the bottom and right corner of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#clickTopLeft()">clickTopLeft</a>()
+      </code>
+      
+        <p>Clicks the top and left corner of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#dragTo(android.support.test.uiautomator.UiObject, int)">dragTo</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> destObj, int steps)
+      </code>
+      
+        <p>Drags this object to a destination UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#dragTo(int, int, int)">dragTo</a>(int destX, int destY, int steps)
+      </code>
+      
+        <p>Drags this object to arbitrary coordinates.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#exists()">exists</a>()
+      </code>
+      
+        <p>Check if view exists.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/view/accessibility/AccessibilityNodeInfo.html">AccessibilityNodeInfo</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#findAccessibilityNodeInfo(long)">findAccessibilityNodeInfo</a>(long timeout)
+      </code>
+      
+        <p>Finds a matching UI element in the accessibility hierarchy, by
+ using the selector for this UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/graphics/Rect.html">Rect</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getBounds()">getBounds</a>()
+      </code>
+      
+        <p>Returns the view's <code>bounds</code> property.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getChild(android.support.test.uiautomator.UiSelector)">getChild</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> selector)
+      </code>
+      
+        <p>Creates a new UiObject for a child view that is under the present UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getChildCount()">getChildCount</a>()
+      </code>
+      
+        <p>Counts the child views immediately under the present UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getClassName()">getClassName</a>()
+      </code>
+      
+        <p>Retrieves the <code>className</code> property of the UI element.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getContentDescription()">getContentDescription</a>()
+      </code>
+      
+        <p>Reads the <code>content_desc</code> property of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getFromParent(android.support.test.uiautomator.UiSelector)">getFromParent</a>(<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> selector)
+      </code>
+      
+        <p>Creates a new UiObject for a sibling view or a child of the sibling view,
+ relative to the present UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getPackageName()">getPackageName</a>()
+      </code>
+      
+        <p>Reads the view's <code>package</code> property
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getSelector()">getSelector</a>()
+      </code>
+      
+        <p>Debugging helper.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getText()">getText</a>()
+      </code>
+      
+        <p>Reads the <code>text</code> property of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/android/graphics/Rect.html">Rect</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#getVisibleBounds()">getVisibleBounds</a>()
+      </code>
+      
+        <p>Returns the visible bounds of the view.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isCheckable()">isCheckable</a>()
+      </code>
+      
+        <p>Checks if the UI element's <code>checkable</code> property is currently true.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isChecked()">isChecked</a>()
+      </code>
+      
+        <p>Check if the UI element's <code>checked</code> property is currently true
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isClickable()">isClickable</a>()
+      </code>
+      
+        <p>Checks if the UI element's <code>clickable</code> property is currently true.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isEnabled()">isEnabled</a>()
+      </code>
+      
+        <p>Checks if the UI element's <code>enabled</code> property is currently true.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isFocusable()">isFocusable</a>()
+      </code>
+      
+        <p>Check if the UI element's <code>focusable</code> property is currently true.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isFocused()">isFocused</a>()
+      </code>
+      
+        <p>Check if the UI element's <code>focused</code> property is currently true
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isLongClickable()">isLongClickable</a>()
+      </code>
+      
+        <p>Check if the view's <code>long-clickable</code> property is currently true
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isScrollable()">isScrollable</a>()
+      </code>
+      
+        <p>Check if the view's <code>scrollable</code> property is currently true
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#isSelected()">isSelected</a>()
+      </code>
+      
+        <p>Checks if the UI element's <code>selected</code> property is currently true.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#longClick()">longClick</a>()
+      </code>
+      
+        <p>Long clicks the center of the visible bounds of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#longClickBottomRight()">longClickBottomRight</a>()
+      </code>
+      
+        <p>Long clicks bottom and right corner of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#longClickTopLeft()">longClickTopLeft</a>()
+      </code>
+      
+        <p>Long clicks on the top and left corner of the UI element
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#performMultiPointerGesture(android.view.MotionEvent.PointerCoords[]...)">performMultiPointerGesture</a>(<a href="https://developer.android.com/reference/android/view/MotionEvent.PointerCoords.html">PointerCoords...</a> touches)
+      </code>
+      
+        <p>Performs a multi-touch gesture.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#performTwoPointerGesture(android.graphics.Point, android.graphics.Point, android.graphics.Point, android.graphics.Point, int)">performTwoPointerGesture</a>(<a href="https://developer.android.com/reference/android/graphics/Point.html">Point</a> startPoint1, <a href="https://developer.android.com/reference/android/graphics/Point.html">Point</a> startPoint2, <a href="https://developer.android.com/reference/android/graphics/Point.html">Point</a> endPoint1, <a href="https://developer.android.com/reference/android/graphics/Point.html">Point</a> endPoint2, int steps)
+      </code>
+      
+        <p>Generates a two-pointer gesture with arbitrary starting and ending points.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#pinchIn(int, int)">pinchIn</a>(int percent, int steps)
+      </code>
+      
+        <p>Performs a two-pointer gesture, where each pointer moves diagonally
+ toward the other, from the edges to the center of this UiObject .
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#pinchOut(int, int)">pinchOut</a>(int percent, int steps)
+      </code>
+      
+        <p>Performs a two-pointer gesture, where each pointer moves diagonally
+ opposite across the other, from the center out towards the edges of the
+ this UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#setText(java.lang.String)">setText</a>(<a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)
+      </code>
+      
+        <p>Sets the text in an editable field, after clearing the field's content.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#swipeDown(int)">swipeDown</a>(int steps)
+      </code>
+      
+        <p>Performs the swipe down action on the UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#swipeLeft(int)">swipeLeft</a>(int steps)
+      </code>
+      
+        <p>Performs the swipe left action on the UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#swipeRight(int)">swipeRight</a>(int steps)
+      </code>
+      
+        <p>Performs the swipe right action on the UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#swipeUp(int)">swipeUp</a>(int steps)
+      </code>
+      
+        <p>Performs the swipe up action on the UiObject.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#waitForExists(long)">waitForExists</a>(long timeout)
+      </code>
+      
+        <p>Waits a specified length of time for a view to become visible.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html#waitUntilGone(long)">waitUntilGone</a>(long timeout)
+      </code>
+      
+        <p>Waits a specified length of time for a view to become undetectable.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="2">
+  <a href="#" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+     onclick="return toggleInherited(this, null)" >
+    <img id="inherited-methods-java.lang.Object-trigger" class="jd-expando-trigger-img"
+         height="34"
+         src="https://developer.android.com/assets/images/styles/disclosure_down.png" />
+  </a>From
+class
+<code>
+  
+    <a href="https://developer.android.com/reference/java/lang/Object.html">java.lang.Object</a>
+  
+</code>
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando responsive">
+      
+
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/java/lang/Object.html">Object</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      clone()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        boolean</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      equals(<a href="https://developer.android.com/reference/java/lang/Object.html">Object</a> arg0)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      finalize()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        <a href="https://developer.android.com/reference/java/lang/Class.html">Class</a>&lt;?&gt;</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      getClass()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      hashCode()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      notify()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      notifyAll()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        
+        
+        <a href="https://developer.android.com/reference/java/lang/String.html">String</a></code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      toString()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait(long arg0, int arg1)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait(long arg0)
+      </code>
+      
+    </td>
+  </tr>
+  
+
+  
+  <tr class="api apilevel-" >
+  
+  
+    <td><code>
+        
+        
+        
+        final
+        
+        void</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      wait()
+      </code>
+      
+    </td>
+  </tr>
+  
+
+
+    </table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2 class="api-section">Public constructors</h2>
+
+
+
+<A NAME="UiScrollable(android.support.test.uiautomator.UiSelector)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">UiScrollable</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+UiScrollable (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> container)</pre>
+    
+    
+
+    
+  <p>Constructor.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>container</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: a <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> selector to identify the scrollable
+     layout element.</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2 class="api-section">Public methods</h2>
+
+
+
+<A NAME="flingBackward()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">flingBackward</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean flingBackward ()</pre>
+    
+    
+
+    
+  <p>Performs a backwards fling action with the default number of fling
+ steps (5). If the swipe direction is set to vertical,
+ then the swipe will be performed from top to bottom. If the swipe
+ direction is set to horizontal, then the swipes will be performed from
+ left to right. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if scrolled, and false if can't scroll anymore</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="flingForward()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">flingForward</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean flingForward ()</pre>
+    
+    
+
+    
+  <p>Performs a forward fling with the default number of fling steps (5).
+ If the swipe direction is set to vertical, then the swipes will be
+ performed from bottom to top. If the swipe
+ direction is set to horizontal, then the swipes will be performed from
+ right to left. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if scrolled, false if can't scroll anymore</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="flingToBeginning(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">flingToBeginning</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean flingToBeginning (int maxSwipes)</pre>
+    
+    
+
+    
+  <p>Performs a fling gesture to reach the beginning of a scrollable layout element.
+ The beginning can be at the  top-most edge in the case of vertical controls, or
+ the left-most edge for horizontal controls. Make sure to take into
+ account devices configured with right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true on scrolled else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="flingToEnd(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">flingToEnd</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean flingToEnd (int maxSwipes)</pre>
+    
+    
+
+    
+  <p>Performs a fling gesture to reach the end of a scrollable layout element.
+ The end can be at the  bottom-most edge in the case of vertical controls, or
+ the right-most edge for horizontal controls. Make sure to take into
+ account devices configured with right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true on scrolled, else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getChildByDescription</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> getChildByDescription (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, 
+                <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)</pre>
+    
+    
+
+    
+  <p>Searches for a child element in the present scrollable container.
+ The search first looks for a child element that matches the selector
+ you provided, then looks for the content-description in its children elements.
+ If both search conditions are fulfilled, the method returns a {@ link UiObject}
+ representing the element matching the selector (not the child element in its
+ subhierarchy containing the content-description). By default, this method performs a
+ scroll search.
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String, boolean)">getChildByDescription(UiSelector, String, boolean)</a></code></p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>childPattern</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> for a child in a scollable layout element</p></td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>String</code>: Content-description to find in the children of 
+ the <code>childPattern</code> match</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code></td>
+        <td width="100%"><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> representing the child element that matches the search conditions</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code></code></td>
+          <td width="100%">UiObjectNotFoundException</td>
+        </tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String, boolean)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getChildByDescription</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> getChildByDescription (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, 
+                <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text, 
+                boolean allowScrollSearch)</pre>
+    
+    
+
+    
+  <p>Searches for a child element in the present scrollable container.
+ The search first looks for a child element that matches the selector
+ you provided, then looks for the content-description in its children elements.
+ If both search conditions are fulfilled, the method returns a {@ link UiObject}
+ representing the element matching the selector (not the child element in its
+ subhierarchy containing the content-description).</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>childPattern</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> for a child in a scollable layout element</p></td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>String</code>: Content-description to find in the children of 
+ the <code>childPattern</code> match (may be a partial match)</p></td>
+      </tr>
+      <tr>
+        <td><code>allowScrollSearch</code></td>
+        <td width="100%">
+          <code>boolean</code>: set to true if scrolling is allowed</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code></td>
+        <td width="100%"><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> representing the child element that matches the search conditions</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code></code></td>
+          <td width="100%">UiObjectNotFoundException</td>
+        </tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getChildByInstance(android.support.test.uiautomator.UiSelector, int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getChildByInstance</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> getChildByInstance (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, 
+                int instance)</pre>
+    
+    
+
+    
+  <p>Searches for a child element in the present scrollable container that
+ matches the selector you provided. The search is performed without
+ scrolling and only on visible elements.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>childPattern</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> for a child in a scollable layout element</p></td>
+      </tr>
+      <tr>
+        <td><code>instance</code></td>
+        <td width="100%">
+          <code>int</code>: int number representing the occurance of 
+ a <code>childPattern</code> match</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code></td>
+        <td width="100%"><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> representing the child element that matches the search conditions</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String, boolean)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getChildByText</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> getChildByText (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, 
+                <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text, 
+                boolean allowScrollSearch)</pre>
+    
+    
+
+    
+  <p>Searches for a child element in the present scrollable container. The
+ search first looks for a child element that matches the
+ selector you provided, then looks for the text in its children elements.
+ If both search conditions are fulfilled, the method returns a {@ link UiObject}
+ representing the element matching the selector (not the child element in its
+ subhierarchy containing the text).</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>childPattern</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> selector for a child in a scrollable layout element</p></td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>String</code>: String to find in the children of the <code>childPattern</code> match</p></td>
+      </tr>
+      <tr>
+        <td><code>allowScrollSearch</code></td>
+        <td width="100%">
+          <code>boolean</code>: set to true if scrolling is allowed</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code></td>
+        <td width="100%"><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> representing the child element that matches the search conditions</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code></code></td>
+          <td width="100%">UiObjectNotFoundException</td>
+        </tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getChildByText</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> getChildByText (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> childPattern, 
+                <a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)</pre>
+    
+    
+
+    
+  <p>Searches for a child element in the present scrollable
+ container. The search first looks for a child element that matches the
+ selector you provided, then looks for the text in its children elements.
+ If both search conditions are fulfilled, the method returns a {@ link UiObject}
+ representing the element matching the selector (not the child element in its
+ subhierarchy containing the text). By default, this method performs a
+ scroll search.
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String, boolean)">getChildByText(UiSelector, String, boolean)</a></code></p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>childPattern</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> selector for a child in a scrollable layout element</p></td>
+      </tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>String</code>: String to find in the children of the <code>childPattern</code> match</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code></td>
+        <td width="100%"><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> representing the child element that matches the search conditions</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code></code></td>
+          <td width="100%">UiObjectNotFoundException</td>
+        </tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="getMaxSearchSwipes()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getMaxSearchSwipes</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+int getMaxSearchSwipes ()</pre>
+    
+    
+
+    
+  <p>Gets the maximum number of scrolls allowed when performing a
+ scroll action in search of a child element.
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByDescription(UiSelector, String)</a></code> and
+ <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByText(UiSelector, String)</a></code>.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">max the number of search swipes to perform until giving up</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="getSwipeDeadZonePercentage()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">getSwipeDeadZonePercentage</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+double getSwipeDeadZonePercentage ()</pre>
+    
+    
+
+    
+  <p>Returns the percentage of a widget's size that's considered as a no-touch
+ zone when swiping. The no-touch zone is set as a percentage of a widget's total
+ width or height, denoting a margin around the swipable area of the widget.
+ Swipes must start and end inside this margin. This is important when the
+ widget being swiped may not respond to the swipe if started at a point
+ too near to the edge. The default is 10% from either edge.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>double</code></td>
+        <td width="100%">a value between 0 and 1</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="scrollBackward(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollBackward</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollBackward (int steps)</pre>
+    
+    
+
+    
+  <p>Performs a backward scroll. If the swipe direction is set to vertical,
+ then the swipes will be performed from top to bottom. If the swipe
+ direction is set to horizontal, then the swipes will be performed from
+ left to right. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>steps</code></td>
+        <td width="100%">
+          <code>int</code>: number of steps. Use this to control the speed of the scroll action.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if scrolled, false if can't scroll anymore</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollBackward()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollBackward</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollBackward ()</pre>
+    
+    
+
+    
+  <p>Performs a backward scroll with the default number of scroll steps (55).
+ If the swipe direction is set to vertical,
+ then the swipes will be performed from top to bottom. If the swipe
+ direction is set to horizontal, then the swipes will be performed from
+ left to right. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if scrolled, and false if can't scroll anymore</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollDescriptionIntoView(java.lang.String)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollDescriptionIntoView</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollDescriptionIntoView (<a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)</pre>
+    
+    
+
+    
+  <p>Performs a forward scroll action on the scrollable layout element until
+ the content-description is found, or until swipe attempts have been exhausted.
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#setMaxSearchSwipes(int)">setMaxSearchSwipes(int)</a></code></p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>String</code>: content-description to find within the contents of this scrollable layout element.</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if item is found; else, false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollForward(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollForward</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollForward (int steps)</pre>
+    
+    
+
+    
+  <p>Performs a forward scroll. If the swipe direction is set to vertical,
+ then the swipes will be performed from bottom to top. If the swipe
+ direction is set to horizontal, then the swipes will be performed from
+ right to left. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>steps</code></td>
+        <td width="100%">
+          <code>int</code>: number of steps. Use this to control the speed of the scroll action</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if scrolled, false if can't scroll anymore</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollForward()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollForward</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollForward ()</pre>
+    
+    
+
+    
+  <p>Performs a forward scroll with the default number of scroll steps (55).
+ If the swipe direction is set to vertical,
+ then the swipes will be performed from bottom to top. If the swipe
+ direction is set to horizontal, then the swipes will be performed from
+ right to left. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if scrolled, false if can't scroll anymore</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollIntoView(android.support.test.uiautomator.UiSelector)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollIntoView</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollIntoView (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> selector)</pre>
+    
+    
+
+    
+  <p>Perform a scroll forward action to move through the scrollable layout 
+ element until a visible item that matches the selector is found.
+
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollDescriptionIntoView(java.lang.String)">scrollDescriptionIntoView(String)</a></code> and <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#scrollTextIntoView(java.lang.String)">scrollTextIntoView(String)</a></code>.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>selector</code></td>
+        <td width="100%">
+          <code>UiSelector</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></code> selector</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the item was found and now is in view; else, false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollIntoView(android.support.test.uiautomator.UiObject)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollIntoView</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollIntoView (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a> obj)</pre>
+    
+    
+
+    
+  <p>Perform a forward scroll action to move through the scrollable layout element until
+ a visible item that matches the <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code> is found.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>obj</code></td>
+        <td width="100%">
+          <code>UiObject</code>: <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></code></p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if the item was found and now is in view else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollTextIntoView(java.lang.String)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollTextIntoView</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollTextIntoView (<a href="https://developer.android.com/reference/java/lang/String.html">String</a> text)</pre>
+    
+    
+
+    
+  <p>Performs a forward scroll action on the scrollable layout element until
+ the text you provided is visible, or until swipe attempts have been exhausted.
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#setMaxSearchSwipes(int)">setMaxSearchSwipes(int)</a></code></p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>text</code></td>
+        <td width="100%">
+          <code>String</code>: test to look for</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if item is found; else, false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollToBeginning(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollToBeginning</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollToBeginning (int maxSwipes)</pre>
+    
+    
+
+    
+  <p>Scrolls to the beginning of a scrollable layout element. The beginning
+ can be at the  top-most edge in the case of vertical controls, or the
+ left-most edge for horizontal controls. Make sure to take into account
+ devices configured with right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true on scrolled else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollToBeginning(int, int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollToBeginning</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollToBeginning (int maxSwipes, 
+                int steps)</pre>
+    
+    
+
+    
+  <p>Scrolls to the beginning of a scrollable layout element. The beginning
+ can be at the  top-most edge in the case of vertical controls, or the
+ left-most edge for horizontal controls. Make sure to take into account
+ devices configured with right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>maxSwipes</code></td>
+        <td width="100%">
+          <code>int</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>steps</code></td>
+        <td width="100%">
+          <code>int</code>: use steps to control the speed, so that it may be a scroll, or fling</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true on scrolled else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollToEnd(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollToEnd</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollToEnd (int maxSwipes)</pre>
+    
+    
+
+    
+  <p>Scrolls to the end of a scrollable layout element. The end can be at the
+ bottom-most edge in the case of vertical controls, or the right-most edge for
+ horizontal controls. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true on scrolled, else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="scrollToEnd(int, int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">scrollToEnd</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean scrollToEnd (int maxSwipes, 
+                int steps)</pre>
+    
+    
+
+    
+  <p>Scrolls to the end of a scrollable layout element. The end can be at the
+ bottom-most edge in the case of vertical controls, or the right-most edge for
+ horizontal controls. Make sure to take into account devices configured with
+ right-to-left languages like Arabic and Hebrew.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>maxSwipes</code></td>
+        <td width="100%">
+          <code>int</code> <!-- no parameter comment --></p></td>
+      </tr>
+      <tr>
+        <td><code>steps</code></td>
+        <td width="100%">
+          <code>int</code>: use steps to control the speed, so that it may be a scroll, or fling</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true on scrolled else false</p></td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
+        <tr>
+          <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></code></td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+  
+
+</div>
+
+
+<A NAME="setAsHorizontalList()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">setAsHorizontalList</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a> setAsHorizontalList ()</pre>
+    
+    
+
+    
+  <p>Set the direction of swipes to be horizontal when performing scroll actions.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code></td>
+        <td width="100%">reference to itself</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="setAsVerticalList()"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">setAsVerticalList</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a> setAsVerticalList ()</pre>
+    
+    
+
+    
+  <p>Set the direction of swipes to be vertical when performing scroll actions.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code></td>
+        <td width="100%">reference to itself</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="setMaxSearchSwipes(int)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">setMaxSearchSwipes</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a> setMaxSearchSwipes (int swipes)</pre>
+    
+    
+
+    
+  <p>Sets the maximum number of scrolls allowed when performing a
+ scroll action in search of a child element.
+ See <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByDescription(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByDescription(UiSelector, String)</a></code> and
+ <code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html#getChildByText(android.support.test.uiautomator.UiSelector, java.lang.String)">getChildByText(UiSelector, String)</a></code>.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>swipes</code></td>
+        <td width="100%">
+          <code>int</code>: the number of search swipes to perform until giving up</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code></td>
+        <td width="100%">reference to itself</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+<A NAME="setSwipeDeadZonePercentage(double)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">setSwipeDeadZonePercentage</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a> setSwipeDeadZonePercentage (double swipeDeadZonePercentage)</pre>
+    
+    
+
+    
+  <p>Sets the percentage of a widget's size that's considered as no-touch
+ zone when swiping.
+ The no-touch zone is set as percentage of a widget's total width or height,
+ denoting a margin around the swipable area of the widget. Swipes must
+ always start and end inside this margin. This is important when the
+ widget being swiped may not respond to the swipe if started at a point
+ too near to the edge. The default is 10% from either edge.</p></p>
+    
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>swipeDeadZonePercentage</code></td>
+        <td width="100%">
+          <code>double</code>: is a value between 0 and 1</p></td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></code></td>
+        <td width="100%">reference to itself</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+<h2 class="api-section">Protected methods</h2>
+
+
+
+<A NAME="exists(android.support.test.uiautomator.UiSelector)"></A>
+
+<div class="api apilevel-">
+    <h3 class="api-name">exists</h3>
+    <div class="api-level">
+      <div></div>
+      
+  
+
+    </div>
+<pre class="api-signature no-pretty-print">
+boolean exists (<a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a> selector)</pre>
+    
+    
+
+    
+  <p>Used privately when performing swipe searches to decide if an element has become
+ visible or not.</p></p>
+    
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>boolean</code></td>
+        <td width="100%">true if found else false</p></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+</div><!-- end jd-content -->
+
+
+
+<div class="data-reference-resources-wrapper">
+  
+  <ul data-reference-resources>
+    
+    
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/IAutomationSupport.html">IAutomationSupport</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiWatcher.html">UiWatcher</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/By.html">By</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/BySelector.html">BySelector</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/Configurator.html">Configurator</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/EventCondition.html">EventCondition</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/SearchCondition.html">SearchCondition</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiAutomatorInstrumentationTestRunner.html">UiAutomatorInstrumentationTestRunner</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiAutomatorTestCase.html">UiAutomatorTestCase</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiCollection.html">UiCollection</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiDevice.html">UiDevice</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject.html">UiObject</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject2.html">UiObject2</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObject2Condition.html">UiObject2Condition</a></li>
+          <li class="selected api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiScrollable.html">UiScrollable</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiSelector.html">UiSelector</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/Until.html">Until</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/Direction.html">Direction</a></li>
+      </ul>
+    </li>
+    
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/StaleObjectException.html">StaleObjectException</a></li>
+          <li class="api apilevel-"><a href="https://developer.android.com/reference/android/support/test/uiautomator/UiObjectNotFoundException.html">UiObjectNotFoundException</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+
+
+    </div>
+
+    
+
+  
+    
+  
+    
+
+
+
+
+  
+
+
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      
+      <li class="devsite-footer-promo">
+        <a href="https://twitter.com/AndroidDev"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo">
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://developer.android.com/static/images/footer/logo-twitter.svg">
+          
+          
+            Twitter
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow @AndroidDev on Twitter</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="https://plus.google.com/+AndroidDevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo">
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/branding/product/2x/google_plus_48dp.png">
+          
+          
+            Google+
+          
+        </a>
+        <div class="devsite-footer-promo-description">Follow Android Developers on Google+</div>
+      </li>
+      
+      <li class="devsite-footer-promo">
+        <a href="https://www.youtube.com/user/androiddevelopers"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo">
+          
+          
+          <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/product/2x/youtube_48dp.png">
+          
+          
+            YouTube
+          
+        </a>
+        <div class="devsite-footer-promo-description">Check out Android Developers on YouTube</div>
+      </li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+<div class="wrap dac-footer-container">
+  <footer class="dac-footer ">
+    <div class="cols dac-footer-main">
+      <div class="col-1of1">
+        <div class="dac-footer-contact">
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/newsletter/index.html" title="Newsletter">Newsletter</a>
+          
+          <a class="dac-footer-contact-link" href="https://android-developers.blogspot.com/" title="Blog" target="_blank">Blog</a>
+          
+          <a class="dac-footer-contact-link" href="https://developer.android.com/support.html" title="Support">Support</a>
+          
+          <a class="dac-footer-contact-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf27XIxoFmNpTjTYdk-m1uKWGqEnd7_4C_E1AD5fdCfyTBWNA/viewform?usp=pp_url&entry.1909689089&entry.208743710&entry.408796755&entry.1341430893&entry.594931249&entry.1640656812&entry.1759804042&entry.1441312344=developer.android.com" title="Join user studies" target="_blank">Join user studies</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="dac-footer-separator"/>
+      
+      <p class="dac-footer-copyright">
+        
+        Except as noted, this content is licensed under <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a>. For details and restrictions, see the <a href="/license.html">Content License</a>.
+      </p>
+    
+
+    <p class="dac-footer-links">
+      
+      <a href="https://www.android.com" title="Android.com" target="_blank">Android.com</a>
+      
+      <a href="https://developer.android.com/" title="Android Developers">Android Developers</a>
+      
+      <a href="https://developer.android.com/studio/index.html" title="Android Studio">Android Studio</a>
+      
+      <a href="https://developer.android.com/distribute/console/index.html" title="Google Play Console">Google Play Console</a>
+      
+      <a href="https://developer.android.com/legal.html" title="Legal Notice">Legal Notice</a>
+    </p>
+
+    <!-- TODO(akassay) Update all DAC js to use the class instead of the id b/30368561 -->
+    <form class="devsite-utility-footer-language" id="setlang" action="/i18n/setlang/" method="post">
+      <input type="hidden" name="xsrf_token" value="jNwp_S8YeVVj_9hC11E9Eat-i1sTlH54Dutq97PRWBw6MTUwNTQ0MDE5MTMwOTY0MA" />
+      <input type="hidden" name="next" value="/reference/android/support/test/uiautomator/UiScrollable.html">
+      <span id="language" class="locales">
+        <select class="devsite-utility-footer-language-select" name="language">
+          
+          <option value="id"
+            >
+            Bahasa Indonesia
+          </option>
+          
+          <option value="de"
+            >
+            Deutsch
+          </option>
+          
+          <option value="en"
+            >
+            English
+          </option>
+          
+          <option value="es"
+            >
+            español
+          </option>
+          
+          <option value="es-419"
+            >
+            Español (América Latina)
+          </option>
+          
+          <option value="fr"
+            >
+            français
+          </option>
+          
+          <option value="pt-br"
+            >
+            Português Brasileiro
+          </option>
+          
+          <option value="vi"
+            >
+            Tiếng Việt
+          </option>
+          
+          <option value="tr"
+            >
+            Türkçe
+          </option>
+          
+          <option value="ru"
+            >
+            Русский
+          </option>
+          
+          <option value="th"
+            >
+            ภาษาไทย
+          </option>
+          
+          <option value="ja"
+            >
+            日本語
+          </option>
+          
+          <option value="zh-cn"
+             selected="selected" >
+            简体中文
+          </option>
+          
+          <option value="zh-tw"
+            >
+            繁體中文
+          </option>
+          
+          <option value="ko"
+            >
+            한국어
+          </option>
+          
+        </select>
+      </span>
+    </form>
+  </footer>
+</div><!--/.wrap -->
+
+<div class="dac-toast-group">
+  <div class="dac-toast" data-toast>
+    <div class="dac-toast-wrap">
+      
+      This site uses cookies to store your preferences for site-specific language and display options.
+      <button class="dac-toast-close-btn">
+        
+        <span class="dac-button dac-raised dac-primary">OK</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-modal="newsletter" data-newsletter-fb data-swap class="dac-modal newsletter">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <div class="dac-swap" data-swap-container>
+          <section class="dac-swap-section dac-active dac-down">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
+            
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint">* Required Fields</p>
+          </section>
+          <section class="dac-swap-section dac-up">
+            
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
+          </section>
+        </div>
+      </header>
+      <div class="dac-swap" data-swap-container>
+        <section class="dac-swap-section dac-active dac-left">
+          <form action="https://services.google.com/fb/submissions/android-developer-mailing-list/" class="dac-form" method="post">
+            <section class="dac-modal-content">
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  <div class="col-1of2 newsletter-leftCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
+                      <input type="text" class="dac-form-input" name="fullname" id="newsletter-full-name" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email 地址</label>
+                      <input type="email" class="dac-form-input" name="emailaddress" id="newsletter-email" required>
+                      <span class="dac-form-required">*</span>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
+                      <input type="text" class="dac-form-input" name="companydevelopername" id="newsletter-company">
+                    </div>
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
+                      <input type="url" class="dac-form-input" name="playstoreappurls" id="newsletter-play-store">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="dac-form-fieldset">
+                <div class="cols">
+                  
+                  <div class="col-1of2 newsletter-leftCol newsletter-interested" data-validation-message="Please check at least one item.">
+                    
+                    <legend class="dac-form-legend">What are you interested in?<span class="dac-form-required">*</span></legend>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-whats-new" value="whats-new">
+                      <label for="interested-whats-new" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-whats-new" class="dac-form-label">What's new</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-games-updates" value="games-updates">
+                      <label for="interested-games-updates" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-games-updates" class="dac-form-label">Games updates</label>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <input type="checkbox" class="dac-form-checkbox" name="interested" id="interested-android-development" value="android-development">
+                      <label for="interested-android-development" class="dac-form-checkbox-button"></label>
+                      
+                      <label for="interested-android-development" class="dac-form-label">Android development</label>
+                    </div>
+                  </div>
+                  <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
+                    <div class="dac-form-input-group">
+                      
+                      <label for="newsletter-receive-in">Receive newsletter in</label>
+                      <select name="language" class="dac-form-select" id="newsletter-receive-in">
+                        <option value="en-US" selected>English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (Simplified)</option>
+                        <option value="zh-TW">Chinese (Traditional)</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="id">Indonesian (Bahasa)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="pt-BR">Portuguese (Brazilian)</option>
+                        <option value="ru">Russian</option>
+                        <option value="es-419">Spanish (Latin American)</option>
+                        <option value="th">Thai</option>
+                        <option value="tr">Turkish</option>
+                        <option value="vi">Vietnamese</option>
+                      </select>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="marketingoptin" id="newsletter-add" required value="Add me to the mailing list.">
+                          <label for="newsletter-add" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside">
+                            
+                            Add me to the mailing list.
+                            <span class="dac-form-required">*</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dac-form-radio-group">
+                      <div class="dac-media">
+                        <div class="dac-media-figure">
+                          <input type="checkbox" class="dac-form-checkbox" name="privacystatement" id="newsletter-terms" required value="I acknowledge that the information provided in this form will be subject to Google's privacy policy (https://www.google.com/policies/privacy/).">
+                          <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
+                        </div>
+                        <div class="dac-media-body">
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html>
+                            
+                            I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.
+                          </span>
+                          <span class="dac-form-required">*</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+            <input type="hidden" name="referrer" value="dac">
+            <footer class="dac-modal-footer">
+              <div class="cols">
+                <div class="col-2of5">
+                </div>
+              </div>
+              <button type="submit" value="Submit" class="dac-fab dac-primary dac-large dac-modal-action"><i class="dac-sprite dac-arrow-right"></i></button>
+            </footer>
+          </form>
+        </section>
+        <section class="dac-swap-section dac-right">
+          <div class="dac-modal-content">
+            <p class="newsletter-success-message" data-t="newsletter.successDetails">
+              
+              You have successfully signed up for the latest Android developer news and tips.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div><!--/.dac-modal.newsletter-->
+
+
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            Browse this site in <span class="span-target-lang"></span>?
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText">
+                    
+                    You requested a page in <span class="span-target-lang"></span>, but your language preference for this site is <span class="span-current-lang"></span>.
+                  </p>
+                  <p id="resetLangCta">
+                    
+                    Would you like to change your language preference and browse this site in <span class="span-target-lang"></span>? If you want to change your language preference later, use the language menu at the bottom of each page.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="yes" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle>
+                
+                Change Language
+              </button>
+            </a>
+            <a href="#" class="" onclick="return false;">
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle>
+                
+                Not Now
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal-->
+
+
+<div data-modal="api-unavailable" class="dac-modal" id="api-unavailable">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title">
+            
+            This class requires API level <span class="api-level"></span> or higher
+          </h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <p>
+              
+              This doc is hidden because your selected API level for the documentation is <span class="api-level"></span>. You can change the documentation API level with the selector above the left navigation.
+            </p>
+            
+            <p>For more information about specifying the API level your app requires, read <a href="/training/basics/supporting-devices/platforms.html">Supporting Different Platform Versions</a>.</p>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+            <a href="#" class="ok" onclick="return false;">
+              <button class="button dac-primary dac-modal-action ok"
+              data-modal-toggle>
+                
+                OK, make this page visible
+              </button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><!--/.dac-modal#api-unavailable-->
+
+    
+  </div><!--/#body-content-->
+
+  <!-- Nav Setup -->
+  <script>$('[data-dac-nav]').dacNav();</script>
+  <script type="text/javascript">
+    $('.slideshow-container').dacSlideshow({
+        btnPrev: '.slideshow-prev',
+        btnNext: '.slideshow-next',
+        btnPause: '#pauseButton'
+    });
+
+    $(".feed").dacTabbedList({
+      nav_id: '.feed-nav',
+      frame_id: '.feed-frame'
+    });
+  </script>
+  
+  <script src="https://developer.android.com/ytblogger_lists_unified.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/android_metadata_en.js?v=2017091501" defer></script>
+  
+  <script src="https://developer.android.com/reference/lists.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/reference/gms_lists.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/reference/android/support/wearable/lists.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/reference/android/support/test/lists.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/reference/android/support/constraint/lists.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/reference/android/arch/lists.js?v=2017091501" defer></script>
+  <script src="https://developer.android.com/_static2/c4e47240b7/jsi18n/"></script>
+  <script>
+    // Load localized metadata.
+    (function(lang) {
+      if (lang === 'en') { return; }
+      document.write('<script src="https://developer.android.com/android_metadata_zh-cn.js?v=2017091501" defer></' + 'script>');
+    })(getLangPref())
+
+    // Add skip to content for accessibility.
+    $('#skip-to-main').click(function() {
+      $('a[name=top]').focus();
+    });
+
+    $('.devsite-utility-footer-language-select').each(function() {
+      $(this).change(function() {
+        changeLangPref(this.value, true)
+        $('.devsite-utility-footer-language').submit();
+      });
+    });
+  </script>
+
+  <script>
+    (function($) {
+      devsite.analytics.InitAnalytics();
+    })(jQuery);
+  </script>
+
+  
+
+
+<div id="survey-box-wrapper">
+  <div class="material-dialog" style="width:270px">
+    <div class="material-dialog-title">
+      Take a short survey?
+    </div>
+    <div class="material-dialog-description">
+      Help us improve the Android developer experience.
+      <br>(Sep 2017 survey)
+    </div>
+    <div class="material-button-bar">
+      <a class="dac-button dac-primary dac-raised" target="_blank"
+          href="https://goo.gl/dNPzCR">Okay</a>
+      <a class="dac-button" href="#">No thanks</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
